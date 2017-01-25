@@ -927,7 +927,7 @@ ul.sf-menu .mega_menu li
 /* --- page --- */
 .page
 {
-	width: 1050px;
+	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-bottom: 50px;
@@ -1303,16 +1303,16 @@ a.slider_control:hover
 }
 .column_1_2
 {
-	width: 510px;
+	width: 560px;
 }
 .column_1_3,
 .column_2_3 .column_1_2
 {
-	width: 330px;
+	width: 380px;
 }
 .column_2_3
 {
-	width: 690px;
+	width: 790px;
 }
 .column_1_3 .column_1_2
 {

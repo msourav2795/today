@@ -1,3 +1,23 @@
+@media screen and (max-width:1230px)
+{
+	.page
+	{
+		width: 1050px;
+	}
+	.column_1_2
+	{
+		width: 510px;
+	}
+	.column_1_3,
+	.column_2_3 .column_1_2
+	{
+		width: 330px;
+	}
+	.column_2_3
+	{
+		width: 690px;
+	}
+}
 @media screen and (max-width:1069px)
 {
 	/* --- site container --- */

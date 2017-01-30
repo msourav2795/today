@@ -1374,6 +1374,26 @@ a.slider_control:hover
 {
 	margin-top: 30px;
 }
+iframe {
+   position:  absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+}
+.post .frame
+{
+	position: relative;
+	display: block;
+	width: 100%;
+	opacity: 1;
+	transition: opacity 0.4s ease-in-out 0s;
+}
+.post iframe:hover
+{
+	opacity: 0.8;
+	transition: opacity 0.4s ease-in-out 0s;
+}
 .post img
 {
 	position: relative;

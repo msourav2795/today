@@ -1374,7 +1374,7 @@ a.slider_control:hover
 {
 	margin-top: 30px;
 }
-iframe {
+.post iframe {
    position:  absolute;
    top: 0;
    left: 0;

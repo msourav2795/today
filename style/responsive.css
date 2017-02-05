@@ -65,7 +65,7 @@
 	.page,
 	.footer
 	{
-		width: 900px;
+		width: 960px;
 	}
 	.header .placeholder
 	{
@@ -267,16 +267,16 @@
 	/* --- page layout --- */
 	.column_1_2
 	{
-		width: 435px;
+		width: 435px;/* same */
 	}
 	.column_1_3,
 	.column_2_3 .column_1_2
 	{
-		width: 280px;
+		width: 300px;
 	}
 	.column_2_3
 	{
-		width: 590px;
+		width: 630px;
 	}
 	.column_1_3 .column_1_2
 	{
@@ -628,7 +628,7 @@
 		width: 700px;
 	}
 }
-@media screen and (max-width:920px)
+@media screen and (max-width:977px)
 {
 	.page,.footer
 	{

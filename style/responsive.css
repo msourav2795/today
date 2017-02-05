@@ -8,7 +8,7 @@
 	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li,
 	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li img
 	{
-		width: 30vw;
+		width: 380.797px;
 	}
 	.horizontal_carousel_container.big .horizontal_carousel > li img
 	{
@@ -33,6 +33,20 @@
 	.column_2_3
 	{
 		width: 690px;
+	}
+		.horizontal_carousel_container .horizontal_carousel > li,
+	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-4 > li,
+	.column_2_3 .horizontal_carousel_container.big .horizontal_carousel > li img,
+	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-3 > li,
+	.column_1_1 .horizontal_carousel_container.big .horizontal_carousel.visible-3 > li,
+	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li,
+	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li img
+	{
+		width: 330px;
+	}
+	.horizontal_carousel_container.big .horizontal_carousel > li img
+	{
+		width: auto;
 	}
 }
 @media screen and (max-width:1069px)
@@ -527,12 +541,12 @@
 	.horizontal_carousel_container .horizontal_carousel > li,
 	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-4 > li
 	{
-		width: 230px;
+		width: 300px;
 	}
 	.column_1_1 .horizontal_carousel_container.big .horizontal_carousel.visible-3 > li,
 	.horizontal_carousel_container.big .horizontal_carousel > li img 
 	{
-		width: 230px;
+		width: 300px;
 	}
 	.horizontal_carousel_container.big a.slider_control,
 	.column_1_1 .horizontal_carousel_container.big a.slider_control,
@@ -644,6 +658,20 @@
 	.column_2_3
 	{
 		width: 570px;
+	}
+	.horizontal_carousel_container .horizontal_carousel > li,
+	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-4 > li,
+	.column_2_3 .horizontal_carousel_container.big .horizontal_carousel > li img,
+	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-3 > li,
+	.column_1_1 .horizontal_carousel_container.big .horizontal_carousel.visible-3 > li,
+	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li,
+	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li img
+	{
+		width: 270.4px;
+	}
+	.horizontal_carousel_container.big .horizontal_carousel > li img
+	{
+		width: 270.4px;
 	}	
 }
 @media screen and (max-width:890px)
@@ -666,6 +694,20 @@
 	{
 		width: 490px;
 	}	
+	.horizontal_carousel_container .horizontal_carousel > li,
+	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-4 > li,
+	.column_2_3 .horizontal_carousel_container.big .horizontal_carousel > li img,
+	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-3 > li,
+	.column_1_1 .horizontal_carousel_container.big .horizontal_carousel.visible-3 > li,
+	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li,
+	.gallery_popup .horizontal_carousel_container.big .horizontal_carousel > li img
+	{
+		width: 230.8px;
+	}
+	.horizontal_carousel_container.big .horizontal_carousel > li img
+	{
+		width: 230.8px;
+	}
 }
 @media screen and (max-width:767px)
 {

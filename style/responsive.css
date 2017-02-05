@@ -632,6 +632,24 @@
 {
 	.page,.footer
 	{
+		width: 870px;
+	}
+
+
+	.column_1_3,
+	.column_2_3 .column_1_2
+	{
+		width: 270px;
+	}
+	.column_2_3
+	{
+		width: 570px;
+	}	
+}
+@media screen and (max-width:890px)
+{
+	.page,.footer
+	{
 		width: 750px;
 	}
 

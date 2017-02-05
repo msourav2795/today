@@ -65,7 +65,7 @@
 	.page,
 	.footer
 	{
-		width: 750px;
+		width: 900px;
 	}
 	.header .placeholder
 	{
@@ -267,16 +267,16 @@
 	/* --- page layout --- */
 	.column_1_2
 	{
-		width: 360px;
+		width: 435px;
 	}
 	.column_1_3,
 	.column_2_3 .column_1_2
 	{
-		width: 230px;
+		width: 280px;
 	}
 	.column_2_3
 	{
-		width: 490px;
+		width: 590px;
 	}
 	.column_1_3 .column_1_2
 	{
@@ -627,6 +627,27 @@
 	{
 		width: 700px;
 	}
+}
+@media screen and (max-width:920px)
+{
+	.page,.footer
+	{
+		width: 750px;
+	}
+
+	.column_1_2
+	{
+		width: 360px;
+	}
+	.column_1_3,
+	.column_2_3 .column_1_2
+	{
+		width: 230px;
+	}
+	.column_2_3
+	{
+		width: 490px;
+	}	
 }
 @media screen and (max-width:767px)
 {

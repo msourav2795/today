@@ -1,4 +1,4 @@
-@media screen and (max-width:1830px){
+@media screen and (max-width:2230px){
 /* --- carousel --- */
 	.horizontal_carousel_container .horizontal_carousel > li,
 	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-4 > li,
@@ -13,6 +13,16 @@
 	.horizontal_carousel_container.big .horizontal_carousel > li img
 	{
 		width: auto;
+	}
+	.column_1_3 .blog.small .post
+	{
+		width: 100%;
+	}
+	.column_2_3 .column_1_2 .blog.small .post_content,
+	.column_1_3 .blog.small .post_content 
+	{
+		width: 270px;
+		margin-left: 10px;
 	}
 	}
 @media screen and (max-width:1218px)
@@ -47,6 +57,16 @@
 	.horizontal_carousel_container.big .horizontal_carousel > li img
 	{
 		width: auto;
+	}
+		.column_1_3 .blog.small .post
+	{
+		width: 100%;
+	}
+	.column_2_3 .column_1_2 .blog.small .post_content,
+	.column_1_3 .blog.small .post_content 
+	{
+		width: 220px;
+		margin-left: 10px;
 	}
 }
 @media screen and (max-width:1069px)
@@ -355,7 +375,7 @@
 	.column_2_3 .column_1_2 .blog.small .post_content,
 	.column_1_3 .blog.small .post_content 
 	{
-		width: 120px;
+		width: 190px;
 		margin-left: 10px;
 	}
 	.post ul.post_details.simple
@@ -380,7 +400,7 @@
 	}
 	.column_1_3 .blog.small .post
 	{
-		width: 230px;
+		width: 100%;
 	}
 	.mega_menu .column_1_2,
 	.mega_menu .column_1_2 .blog.small .post
@@ -672,7 +692,17 @@
 	.horizontal_carousel_container.big .horizontal_carousel > li img
 	{
 		width: 270.4px;
-	}	
+	}
+	.column_1_3 .blog.small .post
+	{
+		width: 100%;
+	}
+	.column_2_3 .column_1_2 .blog.small .post_content,
+	.column_1_3 .blog.small .post_content 
+	{
+		width:160px;
+		margin-left: 10px;
+	}
 }
 @media screen and (max-width:890px)
 {
@@ -707,6 +737,12 @@
 	.horizontal_carousel_container.big .horizontal_carousel > li img
 	{
 		width: 230.8px;
+	}
+	.column_2_3 .column_1_2 .blog.small .post_content,
+	.column_1_3 .blog.small .post_content 
+	{
+		width:120px;
+		margin-left: 10px;
 	}
 }
 @media screen and (max-width:767px)
@@ -925,9 +961,10 @@
 	{
 		font-size: 11px;
 	}
+	.column_1_3 .blog.small>ul
 	.column_1_3 .blog.small .post
 	{	
-		width: 462px;
+		width: 100%;
 	}
 	.column_2_3 .column_1_2 .blog.small .post,
 	.blog.big img,

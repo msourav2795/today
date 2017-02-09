@@ -265,20 +265,30 @@ input[type=text] {
 }
 }
 
+
+
+
+
 </style>
 
 <script>
 (function($) { // Begin jQuery
   $(function() { // DOM ready
     // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
+    $('nav ul li a:not(:only-child').mouseenter(function(e) {
+      $(this).siblings('.nav-dropdown').show();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+	$('.h-menu').mouseleave(function(e) {
+      $(this).siblings('.nav-dropdown').hide();
       // Close one dropdown when selecting another
       $('.nav-dropdown').not($(this).siblings()).hide();
       e.stopPropagation();
     });
     // Clicking away from dropdown will remove the dropdown class
-    $('html').click(function() {
+    $('html').hover(function() {
       $('.nav-dropdown').hide();
     });
     // Toggle open and close nav styles on click
@@ -325,7 +335,7 @@ input[type=text] {
             </li>
           </ul>
         </li>
-		<li>
+		<li class="h-menu">
           <a href="#!" style="text-decoration:none">Leaders Special</a>
           <ul class="nav-dropdown">
             <li>
@@ -345,7 +355,7 @@ input[type=text] {
 		<li>
           <a href="#!" style="text-decoration:none">Blog</a>
         </li>
-		<li>
+		<li class="h-menu">
           <a href="#!" style="text-decoration:none">More</a>
           <ul class="nav-dropdown">
             <li>

@@ -348,7 +348,7 @@ jQuery(document).ready(function($){
 			$(this).addClass("pr_preloader_" + index);
 			//$(".pr_preloader_" + index + " img:first").attr('src',$(".pr_preloader_" + index + " img:first").attr('src') + '?i='+getRandom(1,100000));
 			$(".pr_preloader_" + index).before("<span class='pr_preloader'></span>");
-			$(".pr_preloader_" + index + " img:first").one("load", function(){
+			$(".pr_preloader_" + index + " iframe:first,img:first").one("load", function(){
 				$(".pr_preloader_" + index).prev(".pr_preloader").remove();
 				$(".pr_preloader_" + index).fadeTo("slow", 1, function(){
 					$(this).css("opacity", "");
@@ -459,8 +459,8 @@ jQuery(document).ready(function($){
 				
 				if(parseInt(navigation))
 				{
-					$(".pr_preloader_" + index).parent().before("<a class='slider_control left slider_control_" + index + "' href='#' title='prev'></a>");
-					$(".pr_preloader_" + index).parent().after("<a class='slider_control right slider_control_" + index + "' href='#' title='next'></a>");
+					$(".pr_preloader_" + index).parent().before("<a class='slider_control left slider_control_" + index + "' href='#'></a>");
+					$(".pr_preloader_" + index).parent().after("<a class='slider_control right slider_control_" + index + "' href='#'></a>");
 					$(".pr_preloader_" + index).parent().parent().hover(function(){
 						$(".horizontal_carousel_container .left.slider_control_" + index).removeClass("slideRightBack").addClass("slideRight");
 						$(".horizontal_carousel_container .right.slider_control_" + index).removeClass("slideLeftBack").addClass("slideLeft");
@@ -715,8 +715,8 @@ jQuery(document).ready(function($){
 				});
 				if(navigation)
 				{
-					$(".pr_preloader_vl_" + index).parent().before("<a class='slider_control up slider_control_" + index + "' href='#' title='prev'></a>");
-					$(".pr_preloader_vl_" + index).parent().after("<a class='slider_control down slider_control_" + index + "' href='#' title='next'></a>");
+					$(".pr_preloader_vl_" + index).parent().before("<a class='slider_control up slider_control_" + index + "' href='#'></a>");
+					$(".pr_preloader_vl_" + index).parent().after("<a class='slider_control down slider_control_" + index + "' href='#'></a>");
 					$(".pr_preloader_vl_" + index).parent().parent().hover(function(){
 						$(".vertical_carousel_container .up.slider_control_" + index).removeClass("slideDownBack").addClass("slideDown");
 						$(".vertical_carousel_container .down.slider_control_" + index).removeClass("slideUpBack").addClass("slideUp");
@@ -980,7 +980,7 @@ jQuery(document).ready(function($){
 			if(!carousel.find(".navigation_container").length)
 			{
 				carousel.children().each(function(index){
-					$(this).find(".column_1_3").prepend("<div class='navigation_container clearfix'><ul id='slider_navigation_" + index + "' class='slider_navigation'><li class='slider_control'><a title='prev' href='#' class='left_" + index + "'></a></li><li class='slider_control'><a title='next' href='#' class='right_" + index + "'></a></li></ul><div class='slider_info'>" + (index+1) + " / " + carousel.children().length + "</div></div>");
+					$(this).find(".column_1_3").prepend("<div class='navigation_container clearfix'><ul id='slider_navigation_" + index + "' class='slider_navigation'><li class='slider_control'><a href='#' class='left_" + index + "'></a></li><li class='slider_control'><a href='#' class='right_" + index + "'></a></li></ul><div class='slider_info'>" + (index+1) + " / " + carousel.children().length + "</div></div>");
 					$(panelId + " .left_" + index).click(function(event){
 						event.preventDefault();
 						carousel.trigger("isScrolling", function(isScrolling){

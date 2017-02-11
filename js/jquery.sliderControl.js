@@ -20,8 +20,8 @@
 				
 				//slider controls
 				var sliderControl = $("<ul class='slider_navigation' id='slider_navigation_" + expando + "'>");
-				sliderControl.append($("<li class='slider_control'><a class='left_" + expando + "' href='#' title='prev'></a></li>"));
-				sliderControl.append($("<li class='slider_control'><a class='right_" + expando + "' href='#' title='next'></a></li>"));
+				sliderControl.append($("<li class='slider_control'><a class='left_" + expando + "' href='#' ></a></li>"));
+				sliderControl.append($("<li class='slider_control'><a class='right_" + expando + "' href='#'></a></li>"));
 				//sliderControl.append("<li class='slider_bar' style='width:" + (100/self.children().length) + "%;'></li>");
 				
 				if(options.listContainer!="" && options.listContainer.length)
@@ -58,8 +58,8 @@
 					});
 					if(sliderPostsList.children().length>options.listItems)
 					{
-						sliderPostsList.parent().before("<a class='slider_control left slider_control_" + expando + "' href='#' title='prev'></a>");
-						sliderPostsList.parent().after("<a class='slider_control right slider_control_" + expando + "' href='#' title='next'></a>");
+						sliderPostsList.parent().before("<a class='slider_control left slider_control_" + expando + "' href='#' ></a>");
+						sliderPostsList.parent().after("<a class='slider_control right slider_control_" + expando + "' href='#' ></a>");
 						$("#slider_posts_list_" + expando).parent().parent().hover(function(){
 							//$(".slider_control_" + expando).css("display", "block");
 							$(".slider_posts_list_container .left.slider_control_" + expando).removeClass("slideRightBack").addClass("slideRight");
@@ -346,12 +346,12 @@
 				}
 			};
 			if(typeof(param)=="undefined")
-				self.trigger("slideTo", [slide, {direction: (direction=="left" ? "prev" : "next"), onAfter: function(){
+				self.trigger("slideTo", [slide, {direction: (direction=="left" ? "" : ""), onAfter: function(){
 					self.trigger("configuration", scrollOptions);
 					$("#slider_posts_list_" + expando).trigger("configuration", scrollOptions);
 				}}]);
 			else if(parseInt(param)==1)
-				self.trigger("slideTo", [slide, {duration: 0, direction: (direction=="left" ? "prev" : "next"), onAfter: function(){
+				self.trigger("slideTo", [slide, {duration: 0, direction: (direction=="left" ? "" : ""), onAfter: function(){
 					self.trigger("configuration", scrollOptions);
 					$("#slider_posts_list_" + expando).trigger("configuration", scrollOptions);
 				}}]);

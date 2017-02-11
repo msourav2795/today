@@ -274,26 +274,26 @@ input[type=text] {
 <script>
 (function($) { // Begin jQuery
   $(function() { // DOM ready
-    // If a link has a dropdown, add sub menu toggle.
-    $('nav ul li a:not(:only-child').mouseenter(function(e) {
-      $(this).siblings('.nav-dropdown').show();
-      // Close one dropdown when selecting another
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
+   
 	$('.h-menu').mouseleave(function(e) {
       $(this).siblings('.nav-dropdown').hide();
       // Close one dropdown when selecting another
       $('.nav-dropdown').not($(this).siblings()).hide();
       e.stopPropagation();
     });
-    // Clicking away from dropdown will remove the dropdown class
-    $('html').hover(function() {
-      $('.nav-dropdown').hide();
+	
+	 // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child').mouseenter(function(e) {
+      $(this).siblings('.nav-dropdown').show();
+      // Close one dropdown when selecting another
+      
     });
+    // Clicking away from dropdown will remove the dropdown class
+    
     // Toggle open and close nav styles on click
     $('#nav-toggle').click(function() {
       $('nav ul').slideToggle();
+	  $('.nav-dropdown').hide();
     });
     // Hamburger to X toggle
     $('#nav-toggle').on('click', function() {
@@ -355,9 +355,9 @@ input[type=text] {
 		<li>
           <a href="#!" style="text-decoration:none">Blog</a>
         </li>
-		<li class="h-menu">
+		<li class="h-menu _scroll" >
           <a href="#!" style="text-decoration:none">More...</a>
-          <ul class="nav-dropdown">
+          <ul class="nav-dropdown" style="max-height:300px;overflow-y:scroll">
             <li>
               <a href="#!" style="text-decoration:none">India</a><a href="#!" style="text-decoration:none">World</a>
             </li>
@@ -423,14 +423,14 @@ input[type=text] {
    
   
    
-
+	<div class="carousel-inner">
 	  
         <div class="item  active" > <!-- class item  -->
 
 			<iframe class="" style="width:100%" src="https://www.youtube.com/embed/TDwJDRbSYbw?autoplay=1" frameborder="0" allowfullscreen></iframe>
 			
 	   </div>
-	   
+	 </div>  
 
 </div>
  
@@ -440,7 +440,7 @@ input[type=text] {
 		
 	
 	
-	
+	<div class="site_container">
 	
 	
 		
@@ -455,10 +455,10 @@ input[type=text] {
 									<ul class="blog horizontal_carousel scroll-1 navigation-1 easing-easeInOutQuint duration-750">
 										<li class="post">
 											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
-											<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
-										</div>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post.html" title="New Painkiller Rekindles Addiction Concerns">New Painkiller Rekindles Addiction Concerns</a></h5>
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -467,11 +467,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post.html" title="New Painkiller Rekindles Addiction Concerns">
-												<img src='images/samples/330x242/image_08.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post.html" title="New Painkiller Rekindles Addiction Concerns">New Painkiller Rekindles Addiction Concerns</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -480,11 +480,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">
-												<img src='images/samples/330x242/image_01.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">High Altitudes May Aid Weight Control</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -492,66 +492,12 @@ input[type=text] {
 												</li>
 											</ul>
 										</li>
-										<li class="post">
-											<a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">
-												<img src='images/samples/330x242/image_01.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">High Altitudes May Aid Weight Control</a></h5>
-											<ul class="post_details simple">
-												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
-												<li class="date">
-													10:11 PM, Feb 02
-												</li>
-											</ul>
-										</li>
-										<li class="post">
-											<a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<span class="icon gallery"><!--<span class="info">999</span>--></span>
-												<img src='images/samples/330x242/image_03.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
-											<ul class="post_details simple">
-												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
-												<li class="date">
-													10:11 PM, Feb 02
-												</li>
-											</ul>
-										</li>
-										<li class="post">
-											<a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<span class="icon gallery"><!--<span class="info">999</span>--></span>
-												<img src='images/samples/330x242/image_03.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
-											<ul class="post_details simple">
-												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
-												<li class="date">
-													10:11 PM, Feb 02
-												</li>
-											</ul>
-										</li>
-										<li class="post first">
-											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<img src='images/samples/330x242/image_09.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
-											<ul class="post_details simple">
-												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
-												<li class="date">
-													10:11 PM, Feb 02
-												</li>
-											</ul>
-										</li>
-										<li class="post first">
-											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<img src='images/samples/330x242/image_09.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
+										<li class="post" >
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -567,11 +513,11 @@ input[type=text] {
 								<div class="horizontal_carousel_container page_margin_top">
 									<ul class="blog horizontal_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
 										<li class="post">
-											<a href="post.html" title="New Painkiller Rekindles Addiction Concerns">
-												<img src='images/samples/330x242/image_08.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post.html" title="New Painkiller Rekindles Addiction Concerns">New Painkiller Rekindles Addiction Concerns</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -580,11 +526,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">
-												<img src='images/samples/330x242/image_01.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">High Altitudes May Aid Weight Control</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -593,12 +539,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<span class="icon gallery"><!--<span class="info">999</span>--></span>
-												<img src='images/samples/330x242/image_03.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -607,11 +552,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post first">
-											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<img src='images/samples/330x242/image_09.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -627,11 +572,11 @@ input[type=text] {
 								<div class="horizontal_carousel_container page_margin_top">
 									<ul class="blog horizontal_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
 										<li class="post">
-											<a href="post.html" title="New Painkiller Rekindles Addiction Concerns">
-												<img src='images/samples/330x242/image_08.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post.html" title="New Painkiller Rekindles Addiction Concerns">New Painkiller Rekindles Addiction Concerns</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -640,11 +585,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">
-												<img src='images/samples/330x242/image_01.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">High Altitudes May Aid Weight Control</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -653,12 +598,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<span class="icon gallery"><!--<span class="info">999</span>--></span>
-												<img src='images/samples/330x242/image_03.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -667,11 +611,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post first">
-											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<img src='images/samples/330x242/image_09.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -687,11 +631,11 @@ input[type=text] {
 								<div class="horizontal_carousel_container page_margin_top">
 									<ul class="blog horizontal_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
 										<li class="post">
-											<a href="post.html" title="New Painkiller Rekindles Addiction Concerns">
-												<img src='images/samples/330x242/image_08.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post.html" title="New Painkiller Rekindles Addiction Concerns">New Painkiller Rekindles Addiction Concerns</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -700,11 +644,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">
-												<img src='images/samples/330x242/image_01.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_soundcloud.html" title="High Altitudes May Aid Weight Control">High Altitudes May Aid Weight Control</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -713,12 +657,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post">
-											<a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<span class="icon gallery"><!--<span class="info">999</span>--></span>
-												<img src='images/samples/330x242/image_03.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_gallery.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -727,11 +670,11 @@ input[type=text] {
 											</ul>
 										</li>
 										<li class="post first">
-											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<img src='images/samples/330x242/image_09.jpg' alt='img'>
-											</a>
-											<h3 style="padding-top:5px">Heading</h3>
-											<h5><a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a></h5>
+											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:white">
+												<iframe width="100%" height="100%" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+											</div>
+											<h3 style=""><a href="#" >Heading<br>
+											<span style="font-size:16px">New Painkiller Rekindles Addiction Concerns</span></a></h3>
 											<ul class="post_details simple">
 												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
 												<li class="date">
@@ -747,27 +690,24 @@ input[type=text] {
 								<div class="horizontal_carousel_container page_margin_top">
 									<ul class="blog horizontal_carousel autoplay-1 scroll-1 navigation-1 easing-easeInOutQuint duration-750">
 										<li class="post">
-											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:gray">
-											
-										</div>
+											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
+												<img src='images/samples/330x242/image_09.jpg' alt='img'>
+											</a>
 										</li>
 										<li class="post">
-											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:gray">
-											
-										</div>
+											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
+												<img src='images/samples/330x242/image_09.jpg' alt='img'>
+											</a>
 										</li>
 										<li class="post">
-											<div class="frame" style="min-width:30px;padding-top:73.333%;background-color:gray">
-											
-										</div>
+											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
+												<img src='images/samples/330x242/image_09.jpg' alt='img'>
+											</a>
 										</li>
 										<li class="post first">
-										<div style="background-color:gray">
 											<a href="post_small_image.html" title="Built on Brotherhood, Club Lives Up to Name">
-												<img src='images/samples/330x242/image_09.jpg' alt='img' style="opacity:0">
+												<img src='images/samples/330x242/image_09.jpg' alt='img'>
 											</a>
-											</div>
-											
 										</li>
 									</ul>
 								</div>
@@ -776,13 +716,12 @@ input[type=text] {
 							
 						</div>
 						<div class="column column_1_3">
-							<h4 class="box_header">Special coverage</h4>
+							<h4 class="box_header">Special Coverage</h4>
 							<div class="vertical_carousel_container clearfix">
 								<ul class="blog small vertical_carousel  scroll-1 navigation-1 easing-easeInOutQuint duration-750">
 									<li class="post">
-										<a href="post_gallery.html" title="Study Linking Illnes and Salt Leaves Researchers Doubtful">
-											<span class="icon small gallery"></span>
-											<img src='images/samples/100x100/image_06.jpg' alt='img'>
+										<a href="post.html" title="Syrian Civilians Trapped For Months Continue To Be Evacuated">
+											<img src='images/samples/100x100/image_12.jpg' alt='img'>
 										</a>
 										<div class="post_content">
 											<h5>
@@ -1219,7 +1158,7 @@ input[type=text] {
 								</li>
 							</ul>
 						</div>
-						<div class="column column_1_4">
+						<div class="column column_1_4" style="text-align:right">
 							<a class="scroll_top" href="#top" title="Scroll to top">Top</a>
 						</div>
 					</div>

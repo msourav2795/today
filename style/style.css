@@ -1647,7 +1647,8 @@ ul.post_details.simple li.date
 .blog.big img,
 .blog.big .post_content,
 .blog.small img,
-.blog.small .post_content
+.blog.small .post_content,
+.blog.small iframe
 {
 	float: left;
 }
@@ -2816,6 +2817,7 @@ li.detail.category
 	display: none;
 }
 .blog.small .post>a>img,
+.blog.small .post>a>iframe,
 .blog.small .post>a>.icon
 {
 	display: block;

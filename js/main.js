@@ -653,7 +653,7 @@ jQuery(document).ready(function($){
 		$(".vertical_carousel").each(function(index){
 			$(this).addClass("pr_preloader_vl_" + index);
 			//$(".pr_preloader_vl_" + index + " img:first").attr('src',$(".pr_preloader_vl_" + index + " img:first").attr('src') + '?i='+getRandom(1,100000));
-			$(".pr_preloader_vl_" + index + " img:first").one("load", function(){
+			$(".pr_preloader_vl_" + index + " img:first,iframe:first").one("load", function(){
 				//$(this).prev(".pr_preloader").remove();
 				//$(this).fadeTo("slow", 1, function(){
 				//	$(this).css("opacity", "");

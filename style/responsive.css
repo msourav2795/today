@@ -74,6 +74,10 @@
 	.column_1_4{
 		width:240px;
 	}
+	.horizontal_carousel_container a.slider_control
+{
+	top: 90px;
+}
 }
 @media screen and (max-width:1069px)
 {
@@ -562,7 +566,7 @@
 	/* --- carousel --- */
 	.horizontal_carousel_container a.slider_control
 	{
-		top: 124px;
+		top: 80px;
 	}
 	.horizontal_carousel_container .horizontal_carousel > li,
 	.column_1_1 .horizontal_carousel_container .horizontal_carousel.visible-4 > li
@@ -712,6 +716,10 @@
 	.column_1_4{
 		width:280px;
 	}
+		.horizontal_carousel_container a.slider_control
+	{
+		top: 73px;
+	}
 }
 @media screen and (max-width:890px)
 {
@@ -755,6 +763,10 @@
 	}
 	.column_1_4{
 		width:160px;
+	}
+		.horizontal_carousel_container a.slider_control
+	{
+		top: 67px;
 	}
 }
 @media screen and (max-width:767px)
@@ -1052,7 +1064,7 @@
 	.column_1_1 .horizontal_carousel_container a.slider_control,
 	.column_1_1 .horizontal_carousel_container.big a.slider_control
 	{
-		top: 113px;
+		top: 14vw;
 	}
 	.column_1_2 .blog.small .post_content,
 	.column_1_3 .blog.small .post_content
@@ -1534,7 +1546,7 @@
 	.horizontal_carousel_container a.slider_control,
 	.column_1_1 .horizontal_carousel_container a.slider_control
 	{
-		top: 175px;
+		top: 30vw;
 	}
 	.horizontal_carousel_container.big a.slider_control,
 	.column_1_1 .horizontal_carousel_container.big a.slider_control

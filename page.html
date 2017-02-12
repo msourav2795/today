@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LeadersToday</title>
+		<!--meta-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		 
+          
+		<link href='//fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/animations.css">
+		<link rel="stylesheet" type="text/css" href="style/responsive.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery.min.js"></script>
+
+<script src="transition.js"></script>
+<script src="carousel.js"></script>
+<style>
+
+
+
+
+
+
+
+
+
+@charset "UTF-8";
+.navigation {
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif,'Roboto';
+  height: 70px;
+  background: white;
+  padding-right:0px
+  padding-bottom:19px;
+ 
+}
+
+.brand {
+  position: absolute;
+ padding-top:10px;
+  float: left;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-size: 2.6em;
+}
+body{
+margin:none;padding:none;
+
+}
+.brand a,
+.brand a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+nav {
+  float: right;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  float: left;
+  position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+  display: block;
+  padding: 0 18px;
+  line-height: 70px;
+  background: white;
+  color: black;
+  text-decoration: none;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+  background:red;
+  color: white;
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+  padding-left: 4px;
+
+}
+nav ul li ul li {
+  min-width: 150px;
+}
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #262626;
+  height: 70px;
+  width: 70px;
+}
+
+@media only screen and (max-width: 930px) {
+  .nav-mobile {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    padding: 70px 0 15px;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  .nav-dropdown {
+    position: static;
+  }
+  input[type=text] {
+    width: 100%;
+}
+}
+@media screen and (min-width: 930px) {
+  .nav-list {
+    display: block !important;
+  }
+
+}
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+  top: -10px;
+}
+#nav-toggle span:after {
+  bottom: -10px;
+}
+#nav-toggle.active span {
+  background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+article {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1700px){
+		
+.item,.item iframe{height:350px;}
+.glyphicon-chevron-right,.glyphicon-chevron-left{top:260px;}
+}
+@media screen and (max-width: 1200px){
+	   input[type=text] {
+    width: 100%;
+}	
+.item,.item iframe{height:300px;width:100%}
+.glyphicon-chevron-right,.glyphicon-chevron-left{top:225px;}
+}
+@media screen and (max-width: 900px){
+		
+.item,.item iframe{height:250px;width:100%}
+.glyphicon-chevron-right,.glyphicon-chevron-left{top:214px;}
+}
+@media screen and (max-width: 700px){
+		
+.item,.item iframe{height:200px;width:100%}
+.glyphicon-chevron-right,.glyphicon-chevron-left{top:195px;}
+}
+@media screen and (max-width: 480px){
+		
+.item,.item iframe{height:150px;width:100%}
+.glyphicon-chevron-right,.glyphicon-chevron-left{top:165px;}
+}
+@media screen and (max-width: 1700px) {
+input[type=text] {
+    width: 90px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 10px 12px 35px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.nav-container {
+  max-width: 98%;
+  margin: 0 auto;
+}
+
+}
+@media screen and (max-width: 930px){
+	   input[type=text] {
+    width: 100%;
+}
+.nav-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+}
+
+
+
+
+
+</style>
+
+<script>
+(function($) { // Begin jQuery
+  $(function() { // DOM ready
+   
+	$('.h-menu').mouseleave(function(e) {
+      $(this).siblings('.nav-dropdown').hide();
+      // Close one dropdown when selecting another
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+	
+	 // If a link has a dropdown, add sub menu toggle.
+    $('nav ul li a:not(:only-child').mouseenter(function(e) {
+      $(this).siblings('.nav-dropdown').show();
+      // Close one dropdown when selecting another
+      
+    });
+    // Clicking away from dropdown will remove the dropdown class
+    
+    // Toggle open and close nav styles on click
+    $('#nav-toggle').click(function() {
+      $('nav ul').slideToggle();
+	  $('.nav-dropdown').hide();
+    });
+    // Hamburger to X toggle
+    $('#nav-toggle').on('click', function() {
+      this.classList.toggle('active');
+    });
+  }); // end DOM ready
+})(jQuery); // end jQuery
+</script>
+	</head>
+	<body>
+		<div class="site_container">
+	
+	
+	
+
+	<section class="navigation " >
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!"><strong style="color:blue">LEADERS<span style="color:red">TODAY</span></strong></a>
+    </div>
+    <nav>
+      <div class="nav-mobile" style="z-index:9999999"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+
+        <li>
+          <a href="#!" style="text-decoration:none">LiveTV</a>
+        </li>
+		<li class="h-menu">
+          <a href="#!" style="text-decoration:none">News</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!" style="text-decoration:none">Recent</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Popular</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Trending</a>
+            </li>
+          </ul>
+        </li>
+		<li class="h-menu">
+          <a href="#!" style="text-decoration:none">Leaders Special</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!" style="text-decoration:none">Leaders Report</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Leaders Debate</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Leaders Talk</a>
+            </li>
+          </ul>
+        </li>
+		<li>
+          <a href="#!" style="text-decoration:none">Opinion</a>
+        </li>
+		<li>
+          <a href="#!" style="text-decoration:none">Blog</a>
+        </li>
+		<li class="h-menu _scroll" >
+          <a href="#!" style="text-decoration:none">More...</a>
+          <ul class="nav-dropdown" style="max-height:300px;overflow-y:scroll">
+            <li>
+              <a href="#!" style="text-decoration:none">India</a><a href="#!" style="text-decoration:none">World</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">World</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Politics</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Entertainment</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Sports</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Health</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Technology</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Business</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Education</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Employment</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Travel</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Photo</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Weather</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Other</a>
+            </li>
+          </ul>
+        </li>
+	    <li style="margin-top:15px">
+			<form>
+				<input type="text" name="search" placeholder="Search..">
+			</form>
+        </li>
+		<li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+	
+	
+	
+
+	
+<div class="DemoBS2">
+ <div id="carousel-example-generic" class="carousel slide"> <!-- carousel class-->
+   
+  
+   
+	<div class="carousel-inner">
+	  
+        <div class="item  active" > <!-- class item  -->
+
+			<iframe class="" style="width:100%" src="https://www.youtube.com/embed/TDwJDRbSYbw?autoplay=1" frameborder="0" allowfullscreen></iframe>
+			
+	   </div>
+	 </div>  
+
+</div>
+ 
+    </div>
+
+	
+		
+	
+	
+	<div class="site_container">
+	
+	
+	
+	
+		
+	
+			<div class="page">
+				<div class="page_layout page_margin_top clearfix">
+					<div class="row page_margin_top">
+						<div class="column column_1_1">
+							<h4 class="box_header">Latest Posts</h4>
+							<div class="horizontal_carousel_container big page_margin_top">
+								<ul class="blog big horizontal_carousel scroll-1 visible-3 navigation-1 easing-easeInOutQuint duration-750">
+									<li class="post">
+										<a href="post.html" title="Nuclear Fusion Closer to Becoming a Reality" class="clearfix">
+											<img src='images/samples/330x242/image_01.jpg' alt='img'>
+										</a>
+										<h2 class="with_number">
+											<a href="post.html" title="Nuclear Fusion Closer to Becoming a Reality">Nuclear Fusion Closer to Becoming a Reality</a>
+											<a class="comments_number" href="post.html#comments_list" title="2 comments">2<span class="arrow_comments"></span></a>
+										</h2>
+										<ul class="post_details">
+											<li class="category"><a href="category_world.html" title="WORLD">WORLD</a></li>
+											<li class="date">
+												10:11 PM, Feb 02
+											</li>
+										</ul>
+										<p>Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.</p>
+										<a class="read_more" href="post.html" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
+									</li>
+									<li class="post">
+										<a href="post.html" title="High Altitudes May Aid Weight Control" class="clearfix">
+											<img src='images/samples/330x242/image_02.jpg' alt='img'>
+										</a>
+										<h2 class="with_number">
+											<a href="post.html" title="High Altitudes May Aid Weight Control">High Altitudes May Aid Weight Control</a>
+											<a class="comments_number" href="post.html#comments_list" title="2 comments">2<span class="arrow_comments"></span></a>
+										</h2>
+										<ul class="post_details">
+											<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
+											<li class="date">
+												10:11 PM, Feb 02
+											</li>
+										</ul>
+										<p>Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.</p>
+										<a class="read_more" href="post.html" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
+									</li>
+									<li class="post">
+										<a href="post_soundcloud.html" title="Built on Brotherhood, Club Lives Up to Name" class="clearfix">
+											<img src='images/samples/330x242/image_04.jpg' alt='img'>
+										</a>
+										<h2 class="with_number">
+											<a href="post_soundcloud.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a>
+											<a class="comments_number" href="post_soundcloud.html#comments_list" title="2 comments">2<span class="arrow_comments"></span></a>
+										</h2>
+										<ul class="post_details">
+											<li class="category"><a href="category_science.html" title="SCIENCE">SCIENCE</a></li>
+											<li class="date">
+												10:11 PM, Feb 02
+											</li>
+										</ul>
+										<p>Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.</p>
+										<a class="read_more" href="post_soundcloud.html" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
+									</li>
+									<li class="post">
+										<a href="post_video_2.html" title="Struggling Nuremberg Sack Coach Verbeek" class="clearfix">
+											<span class="icon video"></span>
+											<img src='images/samples/330x242/image_03.jpg' alt='img'>
+										</a>
+										<h2 class="with_number">
+											<a href="post_video_2.html" title="Struggling Nuremberg Sack Coach Verbeek">Struggling Nuremberg Sack Coach Verbeek</a>
+											<a class="comments_number" href="post_video_2.html#comments_list" title="2 comments">2<span class="arrow_comments"></span></a>
+										</h2>
+										<ul class="post_details">
+											<li class="category"><a href="category_sports.html" title="SPORTS">SPORTS</a></li>
+											<li class="date">
+												10:11 PM, Feb 02
+											</li>
+										</ul>
+										<p>Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.</p>
+										<a class="read_more" href="post_video_2.html" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
+									</li>
+									<li class="post">
+										<a href="post.html" title="New Painkiller Rekindles Addiction" class="clearfix">
+											<img src='images/samples/330x242/image_07.jpg' alt='img'>
+										</a>
+										<h2 class="with_number">
+											<a href="post.html" title="New Painkiller Rekindles Addiction">New Painkiller Rekindles Addiction</a>
+											<a class="comments_number" href="post.html#comments_list" title="2 comments">2<span class="arrow_comments"></span></a>
+										</h2>
+										<ul class="post_details">
+											<li class="category"><a href="category_sports.html" title="SPORTS">SPORTS</a></li>
+											<li class="date">
+												10:11 PM, Feb 02
+											</li>
+										</ul>
+										<p>Maecenas mauris elementum, est morbi interdum cursus at elite imperdiet libero. Proin odios dapibus integer an nulla augue pharetra cursus.</p>
+										<a class="read_more" href="post.html" title="Read more"><span class="arrow"></span><span>READ MORE</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_container">
+				<div class="footer clearfix">
+					
+					<div class="row ">
+						<div class="column column_3_4">
+							<ul class="footer_menu">
+								<li>
+									<h4><a href="category_world.html" title="World">About</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_health.html" title="Health">Disclaimer</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_sports.html" title="Sports">Feedback</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_science.html" title="Science">Contact</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_science.html" title="Science">Careers</a></h4>
+								</li>
+							</ul>
+						</div>
+						<div class="column column_1_4" style="text-align:right">
+							<a class="scroll_top" href="#top" title="Scroll to top">Top</a>
+						</div>
+					</div>
+					<div class="row copyright_row">
+						<div class="column column_2_3">
+							<h4>© Copyright</h4> 
+						</div>
+						<div class="column column_1_3">
+							<ul class="social_icons footer_menu">
+								<li>
+									<a title="" href="#" class="social_icon youtube">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a target="_blank" title="" href="#" class="social_icon facebook">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a target="_blank" title="" href="#" class="social_icon twitter">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a title="" href="#" class="social_icon googleplus">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a title="" href="#" class="social_icon pinterest">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a title="" href="#" class="social_icon linkedin">
+										&nbsp;
+									</a>
+								</li>
+								
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="background_overlay"></div>
+		<!--js-->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ba-bbq.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.11.1.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+		<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" src="js/jquery.sliderControl.js"></script>
+		<script type="text/javascript" src="js/jquery.timeago.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		
+
+	</body>
+</html>

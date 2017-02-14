@@ -311,7 +311,7 @@
 	/* --- page layout --- */
 	.column_1_2
 	{
-		width: 435px;/* same */
+		width: 465px;/* same */
 	}
 	.column_1_3,
 	.column_2_3 .column_1_2
@@ -679,7 +679,10 @@
 		width: 870px;
 	}
 
-
+	.column_1_2
+	{
+		width: 420px;/* same */
+	}
 	.column_1_3,
 	.column_2_3 .column_1_2
 	{

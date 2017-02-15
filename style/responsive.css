@@ -498,7 +498,7 @@
 		margin-top: 40px;
 	}
 	/* --- comment form, contact form --- */
-	.comment_form fieldset.column_1_3,
+	/*.comment_form fieldset.column_1_3,
 	.contact_form fieldset.column_1_3
 	{
 		width: 157px;
@@ -531,7 +531,7 @@
 	.column_1_3 .contact_form textarea
 	{
 		width: 190px;
-	}
+	}*/
 	/* --- search form --- */
 	.search_form input[type='text']
 	{

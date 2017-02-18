@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LeadersToday</title>
+		<!--meta-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+		<link href='//fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+		<link rel="stylesheet" type="text/css" href="style/reset.css">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/animations.css">
+		<link rel="stylesheet" type="text/css" href="style/responsive.css">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<script src="transition.js"></script>
+		<script src="carousel.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/nav_carousel.css">
+		<script>
+		(function($) { // Begin jQuery
+			$(function() { // DOM ready   
+				$('.h-menu').mouseleave(function(e) {
+					$(this).siblings('.nav-dropdown').hide();
+					// Close one dropdown when selecting another
+					$('.nav-dropdown').not($(this).siblings()).hide();
+					e.stopPropagation();
+				});
+	
+				// If a link has a dropdown, add sub menu toggle.
+				$('nav ul li a:not(:only-child').mouseenter(function(e) {
+					$(this).siblings('.nav-dropdown').show();
+					// Close one dropdown when selecting another     
+				});
+				// Clicking away from dropdown will remove the dropdown class  
+				// Toggle open and close nav styles on click
+				$('#nav-toggle').click(function() {
+					$('nav ul').slideToggle();
+					$('.nav-dropdown').hide();
+				});
+				// Hamburger to X toggle
+				$('#nav-toggle').on('click', function() {
+					this.classList.toggle('active');
+				});
+			}); // end DOM ready
+		})(jQuery); // end jQuery
+		</script>
+	</head>
+	<body>
+<div class="site_container">
+<section class="navigation " >
+  <div class="nav-container">
+    <div class="brand">
+      <a href="#!"><strong style="color:blue">LEADERS<span style="color:red">TODAY</span></strong></a>
+    </div>
+    <nav>
+      <div class="nav-mobile" style="z-index:9999999"><a id="nav-toggle" href="#!"><span></span></a></div>
+      <ul class="nav-list">
+
+        <li>
+          <a href="#!" style="text-decoration:none">LiveTV</a>
+        </li>
+		<li class="h-menu">
+          <a href="#!" style="text-decoration:none">News</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!" style="text-decoration:none">Recent</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Popular</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Trending</a>
+            </li>
+          </ul>
+        </li>
+		<li class="h-menu">
+          <a href="#!" style="text-decoration:none">Leaders Special</a>
+          <ul class="nav-dropdown">
+            <li>
+              <a href="#!" style="text-decoration:none">Leaders Report</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Leaders Debate</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Leaders Talk</a>
+            </li>
+          </ul>
+        </li>
+		<li>
+          <a href="#!" style="text-decoration:none">Opinion</a>
+        </li>
+		<li>
+          <a href="#!" style="text-decoration:none">Blog</a>
+        </li>
+		<li class="h-menu _scroll" >
+          <a href="#!" style="text-decoration:none">More...</a>
+          <ul class="nav-dropdown" style="max-height:300px;overflow-y:scroll">
+            <li>
+              <a href="#!" style="text-decoration:none">India</a><a href="#!" style="text-decoration:none">World</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">World</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Politics</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Entertainment</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Sports</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Health</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Technology</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Business</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Education</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Employment</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Travel</a>
+            </li>
+            <li>
+              <a href="#!" style="text-decoration:none">Photo</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Weather</a>
+            </li>
+			<li>
+              <a href="#!" style="text-decoration:none">Other</a>
+            </li>
+          </ul>
+        </li>
+	    <li style="margin-top:15px">
+			<form>
+				<input type="text" name="search" placeholder="Search..">
+			</form>
+        </li>
+		<li>
+      </ul>
+    </nav>
+  </div>
+</section>
+		<div class="site_container">
+			<div class="page">
+				<div class="page_layout page_margin_top clearfix">
+					<div class="row">	
+						<div class="column column_1_1">
+							<h1 class="page_title">&nbsp; Entertainment</h1>
+							<hr class="divider ">
+						</div>					
+						<div class="column_1_3" style="float:left">
+							
+							<div class="clearfix"  style="height:1200px">
+								<ul class="blog small">
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="column column_1_3" style="height:2000px">
+							<div class="clearfix">
+								<ul class="blog small">
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="#" title="">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="#" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<ul class="pagination clearfix page_margin_top_section" style="float:right">
+								<li class="left">
+									<a href="#" title="">&nbsp;</a>
+								</li>
+								<li class="selected">
+									<a href="#" title="">
+										1
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										2
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										3
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										4
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										5
+									</a>
+								</li>
+								<li>
+									<a href="#" title="">
+										6
+									</a>
+								</li>
+								<li class="right">
+									<a href="#" title="">&nbsp;</a>
+								</li>
+							</ul>
+						</div>
+						<div class="column column_1_3">
+							<h4 class="box_header page_margin_top_section">Latest News<a href="#" style="float:right;text-decoration:none" ><strong style="color:red">+</strong></a></h4>
+							<div class="vertical_carousel_container clearfix">
+								<ul class="blog small vertical_carousel scroll-1 navigation-1 easing-easeInOutQuint duration-750">
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="post_gallery.html" title="Study Linking Illnes and Salt Leaves Researchers Doubtful">Study Linking Illnes and Salt Leaves Researchers Doubtful</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="category_health.html" title="HEALTH">HEALTH</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="post.html" title="Syrian Civilians Trapped For Months Continue To Be Evacuated">Syrian Civilians Trapped For Months Continue To Be Evacuated</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="category_world.html" title="WORLD">WORLD</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="post.html" title="Built on Brotherhood, Club Lives Up to Name">Built on Brotherhood, Club Lives Up to Name</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="category_sports.html" title="SPORTS">SPORTS</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="post">
+										<iframe width="100px" height="100px" style="position:relative" src="https://www.youtube.com/embed/vwaA-dbVMW8"  frameborder="0" allowfullscreen></iframe>
+										<div class="post_content">
+											<h5>
+												<a href="post.html" title="Nuclear Fusion Closer to Becoming a Reality">Nuclear Fusion Closer to Becoming a Reality</a>
+											</h5>
+											<ul class="post_details simple">
+												<li class="category"><a href="category_science.html" title="SCIENCE">SCIENCE</a></li>
+												<li class="date">
+													10:11 PM, Feb 02
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer_container">
+				<div class="footer clearfix">
+					
+					<div class="row ">
+						<div class="column column_3_4">
+							<ul class="footer_menu">
+								<li>
+									<h4><a href="category_world.html" title="World">About</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_health.html" title="Health">Disclaimer</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_sports.html" title="Sports">Feedback</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_science.html" title="Science">Contact</a></h4>
+								</li>
+								<li>
+									<h4><a href="category_science.html" title="Science">Careers</a></h4>
+								</li>
+							</ul>
+						</div>
+						<div class="column column_1_4" style="text-align:right">
+							<a class="scroll_top" href="#top" title="Scroll to top">Top</a>
+						</div>
+					</div>
+					<div class="row copyright_row">
+						<div class="column column_2_3">
+							<h4>© Copyright</h4> 
+						</div>
+						<div class="column column_1_3">
+							<ul class="social_icons footer_menu">
+								<li>
+									<a title="" href="#" class="social_icon youtube">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a target="_blank" title="" href="#" class="social_icon facebook">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a target="_blank" title="" href="#" class="social_icon twitter">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a title="" href="#" class="social_icon googleplus">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a title="" href="#" class="social_icon pinterest">
+										&nbsp;
+									</a>
+								</li>
+								<li>
+									<a title="" href="#" class="social_icon linkedin">
+										&nbsp;
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="background_overlay"></div>
+		<!--js-->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.ba-bbq.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.11.1.custom.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.carouFredSel-6.2.1-packed.js"></script>
+		<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" src="js/jquery.sliderControl.js"></script>
+		<script type="text/javascript" src="js/jquery.timeago.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
